@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { MainComponent } from './main/main.component';
+import { MainComponent } from "./main/main.component";
 
 @Component({
     selector: 'app-root',
     imports: [MainComponent],
     templateUrl: './app.component.html',
-    styleUrl: './app.component.scss'
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
     title = 'detect-camera-pr280-ng';
