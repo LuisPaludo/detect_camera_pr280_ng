@@ -2,6 +2,10 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ProductService {
+
+    constructor() {
+    }
+
     getProductsData() {
         return [
             {
@@ -1220,4 +1224,4 @@ export class ProductService {
     getProductsWithOrders() {
         return Promise.resolve(this.getProductsWithOrdersData());
     }
-}
+};

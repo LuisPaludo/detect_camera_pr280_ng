@@ -1,21 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../../domain/product';
+import { ProductService } from '../../service/product.service';
 import { Carousel } from 'primeng/carousel';
 import { Tag } from 'primeng/tag';
 import { Button } from 'primeng/button';
-import { NgOptimizedImage, NgStyle } from '@angular/common';
-import { ProductService } from '../service/product.service';
-import { Product } from '../domain/product';
-import { RoadTimerComponent } from "./road-timer/road-timer.component";
+import { NgStyle } from '@angular/common';
 
 @Component({
-    selector: 'app-main',
-    imports: [Carousel, Tag, Button, NgStyle, NgOptimizedImage, RoadTimerComponent],
-    providers: [ProductService],
-    templateUrl: './main.component.html',
-    styleUrl: './main.component.scss'
+    selector: 'app-carousel',
+    imports: [Carousel, Tag, Button, NgStyle],
+    templateUrl: './carousel.component.html',
+    styleUrl: './carousel.component.css',
+    providers: [ProductService]
 })
-export class MainComponent implements OnInit {
-
+export class CarouselComponent implements OnInit {
     products: Product[] = [];
 
     responsiveOptions: any[] = [];
@@ -30,21 +28,26 @@ export class MainComponent implements OnInit {
 
         this.responsiveOptions = [
             {
-                breakpoint: '1024px',
-                numVisible: 3,
-                numScroll: 3
-            },
-            {
-                breakpoint: '768px',
+                breakpoint: '1400px',
                 numVisible: 2,
-                numScroll: 2
+                numScroll: 1
             },
             {
-                breakpoint: '560px',
+                breakpoint: '1199px',
+                numVisible: 3,
+                numScroll: 1
+            },
+            {
+                breakpoint: '767px',
+                numVisible: 2,
+                numScroll: 1
+            },
+            {
+                breakpoint: '575px',
                 numVisible: 1,
                 numScroll: 1
             }
-        ];
+        ]
     }
 
     getSeverity( status: string ) {
@@ -55,8 +58,8 @@ export class MainComponent implements OnInit {
                 return 'warn';
             case 'OUTOFSTOCK':
                 return 'danger';
+            default:
+                return 'warn';
         }
-        return 'success';
     }
-
 }
