@@ -2,13 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../../domain/product';
 import { ProductService } from '../../service/product.service';
 import { Carousel } from 'primeng/carousel';
-import { Tag } from 'primeng/tag';
-import { Button } from 'primeng/button';
-import { NgStyle } from '@angular/common';
 
 @Component({
     selector: 'app-carousel',
-    imports: [Carousel, Tag, Button, NgStyle],
+    imports: [Carousel],
     templateUrl: './carousel.component.html',
     styleUrl: './carousel.component.css',
     providers: [ProductService]
@@ -28,23 +25,28 @@ export class CarouselComponent implements OnInit {
 
         this.responsiveOptions = [
             {
+                breakpoint: '2000px',
+                numVisible: 10,
+                numScroll: 1
+            },
+            {
                 breakpoint: '1400px',
-                numVisible: 2,
+                numVisible: 6,
                 numScroll: 1
             },
             {
                 breakpoint: '1199px',
-                numVisible: 3,
+                numVisible: 4,
                 numScroll: 1
             },
             {
                 breakpoint: '767px',
-                numVisible: 2,
+                numVisible: 4,
                 numScroll: 1
             },
             {
                 breakpoint: '575px',
-                numVisible: 1,
+                numVisible: 2,
                 numScroll: 1
             }
         ]

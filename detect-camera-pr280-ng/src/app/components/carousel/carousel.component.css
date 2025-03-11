@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+@import "primeicons/primeicons.css";
+
+.card {
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
