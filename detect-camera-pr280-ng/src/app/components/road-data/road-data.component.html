@@ -1,0 +1,14 @@
+<ng-container *ngIf="roadData">
+    <div>
+        {{ roadData.road_state | roadState }}
+    </div>
+    <div>
+        E está nesse estado à {{ roadData.state_duration | duration }}
+    </div>
+    <div>
+        {{ roadData.last_road_state | roadStatePast }}
+    </div>
+    <div>
+        E sua duração foi de: {{ roadData.last_road_state_duration | duration }}
+    </div>
+</ng-container>
