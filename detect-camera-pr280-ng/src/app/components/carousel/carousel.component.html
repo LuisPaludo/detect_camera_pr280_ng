@@ -1,16 +1,49 @@
-<p-carousel [value]="products"
+<p-carousel [value]="partners"
             [numVisible]="3"
             [numScroll]="3"
             [circular]="false"
             [responsiveOptions]="responsiveOptions"
-            autoplayInterval="300000">
-    <ng-template let-product #item>
+            autoplayInterval="2000">
+    <ng-template let-partner #item>
         <div class="border border-surface-200 dark:border-surface-700 rounded mx-2">
             <div class="relative mx-auto">
-                <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}"
-                     [alt]="product.name"
-                     class="w-full rounded-border"/>
+                <img src="assets/{{partner.image}}"
+                     [alt]="partner.name"
+                     class="w-full rounded-border"
+                     (click)="openPartnerModal(partner)"
+                />
             </div>
         </div>
     </ng-template>
 </p-carousel>
+
+<p-dialog [(visible)]="displayModal"
+          [modal]="true"
+          [style]="{width: '30rem'}"
+          [breakpoints]="{'960px': '75vw', '640px': '90vw'}"
+          [draggable]="false"
+          [resizable]="false"
+          styleClass="p-card">
+    <ng-template pTemplate="header">
+        <h3 class="text-xl font-semibold">{{selectedPartner?.name}}</h3>
+    </ng-template>
+    <div class="p-4">
+        <p>{{selectedPartner?.about}}</p>
+    </div>
+    <ng-template pTemplate="footer">
+        <div class="flex justify-end gap-3">
+            <a *ngIf="selectedPartner?.facebook" href="{{selectedPartner?.facebook}}" target="_blank" class="p-2">
+                <i class="pi pi-facebook"></i>
+            </a>
+            <a *ngIf="selectedPartner?.twitter" href="{{selectedPartner?.twitter}}" target="_blank" class="p-2">
+                <i class="pi pi-twitter"></i>
+            </a>
+            <a *ngIf="selectedPartner?.instagram" href="{{selectedPartner?.instagram}}" target="_blank" class="p-2">
+                <i class="pi pi-instagram"></i>
+            </a>
+            <a *ngIf="selectedPartner?.website" href="{{selectedPartner?.website}}" target="_blank" class="p-2">
+                <i class="pi pi-globe"></i>
+            </a>
+        </div>
+    </ng-template>
+</p-dialog>

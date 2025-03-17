@@ -1,17 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../domain/product';
 import { ProductService } from '../../service/product.service';
 import { Carousel } from 'primeng/carousel';
+import { Dialog } from 'primeng/dialog';
+import { PrimeTemplate } from 'primeng/api';
+import { NgIf } from '@angular/common';
+import { Partner } from '../../domain/partner';
 
 @Component({
     selector: 'app-carousel',
-    imports: [Carousel],
+    imports: [Carousel, Dialog, PrimeTemplate, NgIf],
     templateUrl: './carousel.component.html',
     styleUrl: './carousel.component.css',
     providers: [ProductService]
 })
 export class CarouselComponent implements OnInit {
-    products: Product[] = [];
+    partners: Partner[] = [];
+    selectedPartner: Partner | null = null;
+    displayModal: boolean = false;
 
     responsiveOptions: any[] = [];
 
@@ -19,8 +24,9 @@ export class CarouselComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.productService.getProductsSmall().then(( products ) => {
-            this.products = products;
+        this.productService.getProductsSmall().then(
+            ( partners ) => {
+            this.partners = partners;
         });
 
         this.responsiveOptions = [
@@ -51,4 +57,10 @@ export class CarouselComponent implements OnInit {
             }
         ]
     }
+
+    openPartnerModal(product: Partner) {
+        this.selectedPartner = product;
+        this.displayModal = true;
+    }
+
 }

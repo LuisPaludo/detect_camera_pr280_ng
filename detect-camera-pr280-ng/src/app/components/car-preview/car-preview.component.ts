@@ -39,8 +39,8 @@ export class CarPreviewComponent implements OnInit, OnChanges {
 
         const endPoint = roadPath.getPointAtLength(this.pathLength);
         const destination = this.destinationRef.nativeElement;
-        destination.style.left = (endPoint.x - 25) + 'px';
-        destination.style.top = (endPoint.y - 25) + 'px';
+        destination.style.left = (endPoint.x - 10) + 'px';
+        destination.style.top = (endPoint.y - 10) + 'px';
 
         this.addRandomTrees();
     }

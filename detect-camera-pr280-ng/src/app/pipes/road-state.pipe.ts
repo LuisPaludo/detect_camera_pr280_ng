@@ -16,9 +16,9 @@ export class RoadStatePipe implements PipeTransform {
             case 'closed':
                 return 'A rodovia está fechada';
             case 'pato_branco':
-                return 'O fluxo de veículos está sentido de Pato Branco';
+                return 'O fluxo de veículos está no sentido de Pato Branco';
             case 'clevelandia':
-                return 'O fluxo de veículos está sentido de Clevelândia';
+                return 'O fluxo de veículos está no sentido de Clevelândia';
             default:
                 return value;
         }

@@ -9,4 +9,9 @@ export interface Product {
     category?: string;
     image?: string;
     rating?: number;
+    about?: string;
+    facebook?: string;
+    instagram?: string;
+    twitter?: string;
+    website?: string;
 }

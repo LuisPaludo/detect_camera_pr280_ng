@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { RoadStateService } from '../../service/road-state.service';
 import { RoadState } from '../../domain/road-state';
-import { NgIf } from '@angular/common';
+import { DatePipe, NgClass, NgIf } from '@angular/common';
 import { interval, Subscription, switchMap } from 'rxjs';
 import { DurationPipe } from '../../pipes/duration-pipe';
 import { RoadStatePipe } from '../../pipes/road-state.pipe';
@@ -15,7 +15,8 @@ import { CarPreviewComponent } from '../car-preview/car-preview.component';
         DurationPipe,
         RoadStatePipe,
         RoadStatePastPipe,
-        CarPreviewComponent
+        NgClass,
+        DatePipe
     ],
     templateUrl: './road-data.component.html',
     styleUrl: './road-data.component.css'
@@ -24,8 +25,7 @@ export class RoadDataComponent implements OnInit, OnDestroy {
 
     roadData: RoadState | null = null;
     private subscription: Subscription = new Subscription();
-
-    @ViewChild('carPreview') carPreviewComponent!: CarPreviewComponent;
+    last_update = new Date();
 
     constructor(
         private roadStateService: RoadStateService,
@@ -36,7 +36,6 @@ export class RoadDataComponent implements OnInit, OnDestroy {
         this.roadStateService.getLatestRoadState().subscribe({
                 next: ( value ) => {
                     this.roadData = value;
-                    this.carPreviewComponent.simulateRequest();
                 },
                 error: ( error ) => {
                     console.log(error)
@@ -47,6 +46,7 @@ export class RoadDataComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
         this.startPolling();
+        this.last_update = new Date();
     }
 
     startPolling(): void {
@@ -57,7 +57,7 @@ export class RoadDataComponent implements OnInit, OnDestroy {
             .subscribe({
                 next: (value) => {
                     this.roadData = value;
-                    this.carPreviewComponent.simulateRequest();
+                    this.last_update = new Date();
                 },
                 error: (error) => {
                     console.log(error);
@@ -69,6 +69,37 @@ export class RoadDataComponent implements OnInit, OnDestroy {
 
     ngOnDestroy(): void {
         this.subscription.unsubscribe();
+    }
+
+    getStateColorClass(state: string): string {
+        switch (state.toLowerCase()) {
+            case 'fechada':
+            case 'closed':
+                return 'bg-red-500';
+            case 'aberta':
+            case 'open':
+                return 'bg-green-500';
+            case 'congested':
+                return 'bg-yellow-500';
+            default:
+                return 'bg-blue-400';
+        }
+    }
+
+    getRoadStateIcon(state: string): string {
+        switch (state.toLowerCase()) {
+            case 'fechada':
+            case 'closed':
+                return 'pi-times-circle';
+            case 'aberta':
+            case 'open':
+                return 'pi-check-circle';
+            case 'congestionada':
+            case 'congested':
+                return 'pi-exclamation-triangle';
+            default:
+                return 'pi-info-circle';
+        }
     }
 
 }
