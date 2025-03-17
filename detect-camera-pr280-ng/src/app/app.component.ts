@@ -16,4 +16,6 @@ export class AppComponent {
     title = 'detect-camera-pr280-ng';
 
 
+
+
 }

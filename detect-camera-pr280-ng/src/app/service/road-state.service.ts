@@ -8,7 +8,9 @@ import { RoadState } from '../domain/road-state';
 })
 export class RoadStateService {
 
-    private dataURL: string = 'https://3ec9-143-255-103-33.ngrok-free.app/api/road-state/latest'
+
+    private baseUrl = 'https://cc33-143-255-103-33.ngrok-free.app'
+    private dataURL: string = `${this.baseUrl}/api/road-state/latest`
 
     constructor(
         private http: HttpClient

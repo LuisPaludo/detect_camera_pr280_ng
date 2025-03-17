@@ -1,0 +1,145 @@
+/* carro-rodovia.component.scss */
+.road-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    max-width: 300px;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #90ee90;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.road {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    left: 0;
+}
+
+.road-path {
+    fill: none;
+    stroke: #555;
+    stroke-width: 12px;
+    stroke-linecap: round;
+}
+
+.road-line {
+    fill: none;
+    stroke: white;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-dasharray: 5 8;
+}
+
+.car {
+    position: absolute;
+    width: 14px;
+    height: 7px;
+    background-color: red;
+    border-radius: 2px;
+    transform-origin: center center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: 2px;
+        width: 10px;
+        height: 3px;
+        background-color: rgba(200, 0, 0, 0.8);
+        border-radius: 2px 2px 0 0;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -1.5px;
+        left: 2px;
+        width: 3px;
+        height: 1.5px;
+        background-color: #333;
+        border-radius: 1px;
+        box-shadow: 7px 0 0 #333;
+    }
+}
+
+.destination {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.progress {
+    margin-top: 10px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 245px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #4169e1;
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-text {
+    font-weight: bold;
+    width: 45px;
+    text-align: right;
+    font-size: 14px;
+}
+
+.trees {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.tree {
+    position: absolute;
+    width: 7px;
+    height: 12px;
+    background-color: #228b22;
+    border-radius: 50% 50% 5% 5%;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 2.5px;
+        width: 2px;
+        height: 2px;
+        background-color: #8b4513;
+    }
+}
