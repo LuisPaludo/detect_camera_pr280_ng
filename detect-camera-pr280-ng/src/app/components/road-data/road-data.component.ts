@@ -72,14 +72,12 @@ export class RoadDataComponent implements OnInit, OnDestroy {
     }
 
     getStateColorClass(state: string): string {
-        switch (state.toLowerCase()) {
-            case 'fechada':
+        switch (state) {
             case 'closed':
                 return 'bg-red-500';
-            case 'aberta':
-            case 'open':
+            case 'pato_branco':
                 return 'bg-green-500';
-            case 'congested':
+            case 'clevelandia':
                 return 'bg-yellow-500';
             default:
                 return 'bg-blue-400';
@@ -87,16 +85,13 @@ export class RoadDataComponent implements OnInit, OnDestroy {
     }
 
     getRoadStateIcon(state: string): string {
-        switch (state.toLowerCase()) {
-            case 'fechada':
+        switch (state) {
             case 'closed':
                 return 'pi-times-circle';
-            case 'aberta':
-            case 'open':
-                return 'pi-check-circle';
-            case 'congestionada':
-            case 'congested':
-                return 'pi-exclamation-triangle';
+            case 'pato_branco':
+                return 'pi-arrow-down-left';
+            case 'clevelandia':
+                return 'pi-arrow-up-right';
             default:
                 return 'pi-info-circle';
         }

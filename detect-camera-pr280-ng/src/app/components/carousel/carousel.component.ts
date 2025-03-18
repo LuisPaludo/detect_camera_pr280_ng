@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../service/product.service';
 import { Carousel } from 'primeng/carousel';
-import { Dialog } from 'primeng/dialog';
-import { PrimeTemplate } from 'primeng/api';
-import { NgIf } from '@angular/common';
 import { Partner } from '../../domain/partner';
+import { ModalPartnerComponent } from '../modal-partner/modal-partner.component';
 
 @Component({
     selector: 'app-carousel',
-    imports: [Carousel, Dialog, PrimeTemplate, NgIf],
+    imports: [Carousel, ModalPartnerComponent],
     templateUrl: './carousel.component.html',
     styleUrl: './carousel.component.css',
     providers: [ProductService]

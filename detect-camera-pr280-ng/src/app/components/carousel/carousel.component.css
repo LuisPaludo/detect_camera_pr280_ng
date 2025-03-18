@@ -7,3 +7,44 @@
     border-radius: 10px;
     margin-bottom: 1rem;
 }
+
+.rgb-border-container {
+    position: relative;
+    padding: 4px; /* Espessura da borda */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.rgb-border-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee, #ff0000
+    );
+    background-size: 400% 400%;
+    z-index: 1;
+    animation: rgbBorderAnimation 20s linear infinite;
+}
+
+.rgb-border-container img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    z-index: 2;
+}
+
+@keyframes rgbBorderAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 400% 50%;
+    }
+}

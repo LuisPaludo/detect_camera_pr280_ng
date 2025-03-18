@@ -13,7 +13,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:application",
                     "options": {
-                        "outputPath": "dist/detect-camera-pr280-ng",
+                        "outputPath": "dist/",
                         "index": "src/index.html",
                         "browser": "src/main.ts",
                         "polyfills": [
@@ -42,8 +42,8 @@
                                 },
                                 {
                                     "type": "anyComponentStyle",
-                                    "maximumWarning": "4kB",
-                                    "maximumError": "8kB"
+                                    "maximumWarning": "30kB",
+                                    "maximumError": "35kB"
                                 }
                             ],
                             "outputHashing": "all"
@@ -91,6 +91,9 @@
                         ],
                         "scripts": []
                     }
+                },
+                "deploy": {
+                  "builder": "angular-cli-ghpages:deploy"
                 }
             }
         }
