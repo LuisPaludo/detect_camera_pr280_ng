@@ -2,40 +2,37 @@
 @import "tailwindcss-primeui";
 @import "primeicons/primeicons.css";
 
-@keyframes cityMove {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #326a3c, #5c3f87, #5b9db6, #75b6a5);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
-@keyframes roadMarkingMove {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100px); }
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-@keyframes sunShine {
-    0% { box-shadow: 0 0 40px 20px rgba(255, 204, 0, 0.7); }
-    50% { box-shadow: 0 0 60px 30px rgba(255, 204, 0, 0.8); }
-    100% { box-shadow: 0 0 40px 20px rgba(255, 204, 0, 0.7); }
-}
-
-.animate-city {
-    animation: cityMove 60s linear infinite;
-}
-
-.animate-road-marking {
-    animation: roadMarkingMove 2s linear infinite;
-}
-
-.animate-sun {
-    animation: sunShine 5s ease-in-out infinite;
-}
-
-/* Definindo o background do skyline da cidade com SVG */
-.city-skyline {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><path d="M0,100 L0,60 L10,60 L10,40 L20,40 L20,60 L30,60 L30,50 L40,50 L40,70 L60,70 L60,30 L70,30 L70,50 L80,50 L80,40 L100,40 L100,60 L120,60 L120,30 L140,30 L140,60 L150,60 L150,50 L160,50 L160,60 L180,60 L180,40 L200,40 L200,70 L220,70 L220,50 L240,50 L240,60 L280,60 L280,50 L300,50 L300,30 L320,30 L320,60 L340,60 L340,40 L350,40 L350,60 L360,60 L360,70 L380,70 L380,40 L400,40 L400,60 L420,60 L420,30 L440,30 L440,60 L460,60 L460,50 L480,50 L480,70 L500,70 L500,50 L520,50 L520,60 L540,60 L540,40 L560,40 L560,60 L570,60 L570,50 L590,50 L590,70 L620,70 L620,50 L640,50 L640,60 L660,60 L660,40 L680,40 L680,60 L700,60 L700,30 L720,30 L720,50 L740,50 L740,60 L760,60 L760,40 L780,40 L780,70 L800,70 L800,50 L820,50 L820,60 L840,60 L840,30 L860,30 L860,60 L880,60 L880,50 L900,50 L900,60 L920,60 L920,40 L940,40 L940,60 L960,60 L960,50 L980,50 L980,60 L1000,60 L1000,100 Z" fill="%23333333"/></svg>');
-}
-
-/* Estilo para as linhas tracejadas da estrada */
-.lane-divider {
-    background: linear-gradient(to right, #ffffff 70px, transparent 70px) 0 0/140px 8px repeat;
+.content {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }

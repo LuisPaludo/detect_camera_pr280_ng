@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, model, ModelSignal } from '@angular/core';
 import { Dialog } from 'primeng/dialog';
 import { NgIf } from '@angular/common';
 import { PrimeTemplate } from 'primeng/api';
@@ -16,6 +16,6 @@ import { Partner } from '../../domain/partner';
 })
 export class ModalPartnerComponent {
     @Input() selectedPartner: Partner | null = null;
-    @Input() displayModal: boolean = false;
+    public displayModal: ModelSignal<boolean> = model(false);
 
 }

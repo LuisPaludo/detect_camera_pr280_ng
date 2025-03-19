@@ -5,7 +5,7 @@
             [responsiveOptions]="responsiveOptions"
             autoplayInterval="2000">
     <ng-template let-partner #item>
-        <div class="border border-surface-200 dark:border-surface-700 rounded mx-2">
+        <div class="rounded mx-2">
             <div class="relative mx-auto rgb-border-container">
                 <img src="assets/{{partner.image}}"
                      [alt]="partner.name"
@@ -16,4 +16,4 @@
         </div>
     </ng-template>
 </p-carousel>
-<app-modal-partner [displayModal]="displayModal" [selectedPartner]="selectedPartner"></app-modal-partner>
+<app-modal-partner [(displayModal)]="displayModal" [selectedPartner]="selectedPartner"></app-modal-partner>

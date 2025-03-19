@@ -7,7 +7,7 @@
             </div>
 
             <div class="p-6">
-                <div class="flex gap-4 items-start mb-4">
+                <div class="flex gap-4 items-center mb-4">
                     <div [ngClass]="getStateColorClass(roadData.moving_avg_state)"
                          class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 text-white text-xl">
                         <i class="pi" [ngClass]="getRoadStateIcon(roadData.moving_avg_state)"></i>
@@ -24,7 +24,7 @@
 
                 <div class="h-px bg-gray-200 my-4"></div>
 
-                <div class="flex gap-4 items-start mb-4">
+                <div class="flex gap-4 items-center mb-4">
                     <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 bg-gray-400 text-white text-xl">
                         <i class="pi pi-history"></i>
                     </div>
