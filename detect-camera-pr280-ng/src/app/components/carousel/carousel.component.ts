@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ProductService } from '../../service/product.service';
 import { Carousel } from 'primeng/carousel';
 import { Partner } from '../../domain/partner';
@@ -12,6 +12,8 @@ import { ModalPartnerComponent } from '../modal-partner/modal-partner.component'
     providers: [ProductService]
 })
 export class CarouselComponent implements OnInit {
+    @Input() showIndicators = true;
+
     partners: Partner[] = [];
     selectedPartner: Partner | null = null;
     displayModal: boolean = false;

@@ -30,12 +30,12 @@
     &quot;assignee&quot;: &quot;LuisPaludo&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/LuisPaludo/detect_camera_pr280_ng.git&quot;,
-    &quot;accountId&quot;: &quot;07935107-2a5c-4e7e-a191-7bf81039bae8&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/LuisPaludo/detect_camera_pr280_ng.git",
+    "accountId": "f2d83fcf-d913-4b06-83bd-1d4959b139fe"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -50,13 +50,15 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "feature/DCPR280",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/paludo/projects/detect_camera_pr280_ng/detect-camera-pr280-ng",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "/home/paludo/.config/JetBrains/IntelliJIdea2025.1/node/versions/22.14.0/bin/node",
+    "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "configurable.tailwindcss",
     "ts.external.directory.path": "/home/paludo/.cache/JetBrains/RemoteDev/dist/8d729662ef98d_ideaIU-251.22821.72/plugins/javascript-plugin/jsLanguageServicesImpl/external",
@@ -69,8 +71,8 @@
       <window_info id="Merge Requests" />
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32993728" />
-      <window_info id="Commit" order="1" weight="0.32993728" />
+      <window_info content_ui="combo" id="Project" order="0" />
+      <window_info id="Commit" order="1" weight="0.32994792" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Learn" order="3" weight="0.32994792" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -84,7 +86,7 @@
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.49375" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.5793269" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.3296545" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.49278846" />
       <window_info anchor="bottom" id="Services" order="4" />
       <window_info anchor="right" id="Plots" />
       <window_info anchor="right" id="Endpoints" />
@@ -98,77 +100,15 @@
       <window_info anchor="right" id="Maven" order="4" weight="0.25" />
     </layout>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="detect_camera_pr280_ng" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="detect_camera_pr280_ng" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="detect_camera_pr280_ng" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Python.FlaskServer">
-      <module name="detect_camera_pr280_ng" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="detect_camera_pr280_ng" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-f9f52b72c171-intellij.indexing.shared.core-IU-251.22821.72" />
-        <option value="bundled-js-predefined-d6986cc7102b-7af238ef196b-JavaScript-IU-251.22821.72" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
       </set>
     </attachedChunks>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="3e75cd10-b1ea-4a51-98e7-127bca9e8f06" name="Changes" comment="" />
@@ -180,6 +120,8 @@
       <workItem from="1741663930965" duration="859000" />
       <workItem from="1741665397382" duration="79000" />
       <workItem from="1742344963390" duration="51000" />
+      <workItem from="1742354279201" duration="269000" />
+      <workItem from="1742513004103" duration="33000" />
     </task>
     <task id="LOCAL-00001" summary="DCPR280NG/Main: First Commit">
       <option name="closed" value="true" />
